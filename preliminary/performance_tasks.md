@@ -28,28 +28,40 @@ Complete the steps below and fill in the `> block` sections
 ### Installing and running OpenCV
 
 1. Examine the `pyproject.toml` what dependencies does it currently identify?
+> It currently does not have any dependencies, it does however have a required
+> python version.
 >
->
+> [project]
+name = "ocrroo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
 2. Create a `.venv` in this folder using `uv venv`
 3. Activate the `venv` as instructed by `uv`
 4. In order to complete the project, we need to install OpenCV. Fill in the following:
   - What role does OpenCV have in this project?
-  >
+  > OpenCV is a library for python that can process images and videos.
   - What is the `uv pip` command to install OpenCV?
-  > `uv pip install ????`
+  > `uv pip install opencv-python`
   - What is the URL of this library's git repo?
-  > [Insert URL Here](https://github.com/opencv/????-?????)
+  > [https://github.com/opencv/opencv-python](https://github.com/opencv/????-?????)
 5. Add OpenCV to your project using the `uv add` command:
   > `uv add name-of-open-cv-library
 
 6. Have the dependencies in the `pyproject.toml` changed? If so, how?
-  >
-  >
+  > Yes, it has added the opencv as a dependency in the toml file.
+  >dependencies = [
+    "opencv-python>=4.12.0.88",
+]
 7. Why did we use `uv add` over `uv pip`?
-  >
+  > The reason that uv add was used over uv pip as uv add also manages the
+  >  package dependencies and adds the package to dependencies in toml while uv pip just installs the package.
   >
 8. The `numpy` library is required for OpenCV. Should you add an explicit requirement for it? Why/Why not?
-  >
+  > The numpy library is not required to be added to the toml as it is already added
+>   in-directly via the addition of the opencv dependency to the toml file.
   >
 9. Commit the changes so far to git. Use the message `chore: add OpenCV dependency`
 10. Go to `preliminary/library_basics.py` and complete the required functionality.
