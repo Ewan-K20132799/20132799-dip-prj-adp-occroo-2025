@@ -86,7 +86,7 @@ Tesseract consists of both an OCR Engine and a command line program. It is predo
 > It has compatibility with cv2 and uses similar libraries to cv2.
 
 4. Use UV to add the dependency to your project and your `pyproject.toml`
-
+> Done
 5. If your library has additional requirements (e.g. installing tesseract binaries), note it in your README.md
 
 6. Commit the new dependency `chore: add tesseract dependency`
