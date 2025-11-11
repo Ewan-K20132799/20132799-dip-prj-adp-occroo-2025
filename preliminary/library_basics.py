@@ -5,8 +5,8 @@ import cv2
 import numpy as np
 import pytesseract
 
-VID_PATH = Path("/home/ellie_marigold/Source/Repos/20132799-dip-prj-adp-occroo-2025/resources/oop.mp4")
-OUT_PATH = Path("/home/ellie_marigold/Source/Repos/20132799-dip-prj-adp-occroo-2025/resources/")
+VID_PATH = Path("./resources/oop.mp4")
+OUT_PATH = Path("./resources/")
 
 class CodingVideo:
     capture: cv2.VideoCapture

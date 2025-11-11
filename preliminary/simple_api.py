@@ -9,6 +9,9 @@ from fastapi import FastAPI, HTTPException
 from fastapi import Response
 from pydantic import BaseModel
 from pathlib import Path
+
+from starlette.datastructures import UploadFile
+
 from library_basics import CodingVideo
 
 
@@ -18,8 +21,9 @@ app = FastAPI()
 # We'll create a lightweight "database" for our videos
 # You can add uploads later (not required for assessment)
 # For now, we will just hardcode are samples
+
 VIDEOS: dict[str, Path] = {
-    "demo": Path("../resources/oop.mp4")
+    "demo": Path("./resources/oop.mp4")
 }
 
 class VideoMetaData(BaseModel):
@@ -78,11 +82,27 @@ def video(vid: str):
 
 
 @app.get("/video/{vid}/frame/{t}", response_class=Response)
-def video_frame(vid: str, t: float):
+def video_frame(vid: str, t: int):
+    video = _open_vid_or_404(vid)
     try:
-        video = _open_vid_or_404(vid)
         return Response(content=video.get_image_as_bytes(t), media_type="image/png")
     finally:
       video.capture.release()
 
-# TODO: add enpoint to get ocr e.g. /video/{vid}/frame/{t}/ocr
+# TODO: add endpoint to get ocr e.g. /video/{vid}/frame/{t}/ocr
+
+@app.post("/video/{vid}/frame/{t}/ocr")
+async def frame_ocr(vid: str, t: int):
+    video = _open_vid_or_404(vid)
+    try:
+        return Response(content=video.get_given_time(t))
+    finally:
+        video.capture.release()
+
+@app.post("/video/{vid}/frame/{t}", response_class=Response)
+def video_frame(vid: str, t: int):
+    video = _open_vid_or_404(vid)
+    try:
+        return Response(content=video.get_image_as_bytes(t), media_type="image/png")
+    finally:
+      video.capture.release()
