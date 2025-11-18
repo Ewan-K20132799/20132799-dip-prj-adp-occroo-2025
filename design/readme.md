@@ -4,9 +4,9 @@ This document showcases design documentation that will be utilised in the creati
 project.
 
 
-## Persona
+## Persona/User Profile
 
-Customer Profile/Persona 1:
+[Customer Profile/Persona 1:]
       [- Name:] 
         - Adelheid Smit
       [- Age:] 
@@ -29,7 +29,7 @@ Customer Profile/Persona 1:
       [- Background:]
         - A programming student
         - Got to this point by studying hard
-        - Dedicated to learing about software development
+        - Dedicated to learning about software development
         - Born in Christchurch, NZ
         - Migrated to Australia as a child (parents were seeking better employment opportunities)
         - Mothers Dutch and Other Parent is from New Zealand
@@ -146,16 +146,78 @@ Consider:
 
 Your persona should reflect the diversity of people with disabilities and their experiences.
 
+## Ideation 
+
+    Ideation:
+           1 - Feed video through AI:
+                - Depends on quality of AI
+                - Depends on programmer bias
+                - Quality of response can be terrible
+                - Usually cost a fair amount
+                - Liability due to subscription
+           2 - Restore sight
+               - Expensive
+               - Still quite experimental
+           3 - Support person
+                - cost can be high
+                - would be more accurate than AI
+           4 - virtual support person
+               - Slightly less expensive
+               - can be less helpful than local supprt
+               - network connectivity and timezone differences
+           5 - screen reader (Chosen solution)
+               - Screen readers can only read text
+               - could interpret text in a video
+               - could cost a lot in terms of time
+               - financal cost would be small
+               - can integrate AI
+           6 - utilise other resources
+               - could be inaccurate
+               - could lack resources in the desired format
+               - cost would be low
+           7 - change accessibility legislation
+               - Would take a lot of time
+
 ## User Journey
 
 What is the user journey? What are the steps the user takes to achieve their goals?
 
-- **Step 1**: [Description of the step]
-- **Step 2**: [Description of the step]
-- **Step 3**: [Description of the step]
-- **Step 4**: [Description of the step]
+    User Story 1:
+              - based on user profile
+              As:
+                - Adelheid
+              I want:
+                - to load any video transcriptions with ease
+              So that:
+                - I can better interpret the concepts that I am being taught
+                - I can successfully complete the course
 
-## UI Interaction Patterns
+    User Story 2:
+             As:
+               - Johan
+             I want:
+               - to be able to save video transcriptions for future use
+             So that:
+               - I can deepen my hobby in software development
+               - Achieve my dream job of working at Apple
+
+    User Story 2 steps:
+             1. Open application
+             2. Select video via drop down menu entered by using keybind 
+             3. Select transcribe gui button via clicking on it or via keybind
+             4. Select save video gui button to save video via clicking on it or via a keybind
+
+    User Story 3:
+            As:
+               - Leon
+            I want:
+              - To be able to copy and edit examples from transcription
+            So that:
+              - I can deepen my knowledge in software development
+              - I deepen knowledge in OpenSource development
+              - I can get degrees from TAFE and University
+
+## UI Interaction Patterns (Wireframes)
 
 What are the UI interaction patterns you will use in your project?
 ![Alt text](/design/resources/ADP_WireFrame.jpg "Image of Wireframe")
@@ -163,3 +225,6 @@ What are the UI interaction patterns you will use in your project?
 ## AI Prompts
 
 Write down any AI prompts you came up with after your first session
+
+what would the code behind a python application for a ocr video screen reader look like?
+What is the issue with this code:

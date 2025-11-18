@@ -28,7 +28,8 @@ class CodingVideo:
 
         Specifically, the following information is shown:
             FPS - Number of frames per second rounded to two decimal points
-            FRAME COUNT - The total number of frames in the video
+            FRAME COUNT - The total numVID_PATH = Path("./resources/oop.mp4")
+OUT_PATH = Path("./resources/")ber of frames in the video
             DURATION (minutes) - Calculated total duration of the video given FPS and FRAME COUNT
 
         Reference
