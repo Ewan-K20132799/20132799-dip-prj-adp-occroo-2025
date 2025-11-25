@@ -65,6 +65,7 @@ project.
      [- Disadvantages:]
         - Poor accessibility to resources due to being unable to properly save transcriptions on screen reader
         - Limited time due to work
+        - Blind
      [- Motivation:]
         - To get his dream job of being a developer for Apple
         - To gain his university undergrad degree in Software Development from UWA
@@ -191,7 +192,8 @@ What is the user journey? What are the steps the user takes to achieve their goa
               So that:
                 - I can better interpret the concepts that I am being taught
                 - I can successfully complete the course
-
+    
+[selected]
     User Story 2:
              As:
                - Johan
@@ -201,11 +203,13 @@ What is the user journey? What are the steps the user takes to achieve their goa
                - I can deepen my hobby in software development
                - Achieve my dream job of working at Apple
 
+[selected steps]
     User Story 2 steps:
              1. Open application
              2. Select video via drop down menu entered by using keybind 
              3. Select transcribe gui button via clicking on it or via keybind
              4. Select save video gui button to save video via clicking on it or via a keybind
+
 
     User Story 3:
             As:
