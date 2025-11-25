@@ -1,7 +1,7 @@
 #imports utilized
 from pathlib import Path
 import cv2
-# import ocr as trans
+import ocr as trans
 
 VID_PATH = Path("../resources/oop.mp4")
 
@@ -37,13 +37,13 @@ class VideoPlayer:
         cv2.destroyAllWindows() # removes video window from screen
 
 
-# class VideoReader:
-   # def __init__(self,
-                # vid_t = trans):
-      # self.vid_t = vid_t
+class VideoReader:
+   def __init__(self,
+                vid_t = trans):
+        self.vid_t = vid_t
 
-    # def video_reader(self):
-      # return self.vid_t
+   def video_reader(self):
+      return self.vid_t
 
 def test():
     video = VideoPlayer(video=VID_PATH)
