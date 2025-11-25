@@ -1,6 +1,5 @@
 # imports
 from pathlib import Path
-import cv2
 from PIL import Image
 import pytesseract
 from preliminary.library_basics import CodingVideo

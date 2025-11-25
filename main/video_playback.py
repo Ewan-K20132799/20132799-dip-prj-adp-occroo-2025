@@ -1,7 +1,6 @@
 #imports utilized
 from pathlib import Path
 import cv2
-import ocr as trans
 
 VID_PATH = Path("../resources/oop.mp4")
 
