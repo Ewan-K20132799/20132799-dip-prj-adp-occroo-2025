@@ -35,15 +35,6 @@ class VideoPlayer:
         cap.release()
         cv2.destroyAllWindows() # removes video window from screen
 
-
-class VideoReader:
-   def __init__(self,
-                vid_t = trans):
-        self.vid_t = vid_t
-
-   def video_reader(self):
-      return self.vid_t
-
 def test():
     video = VideoPlayer(video=VID_PATH)
     video.video_playback()
