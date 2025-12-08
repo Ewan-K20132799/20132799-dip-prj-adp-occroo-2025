@@ -4,6 +4,7 @@
 }
 
 body {
+    background-color: #873e35;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,10 +28,10 @@ body {
     max-width: 500px;
     max-height: 300px;
     position: relative;
-    border: 1px;
-    border-style: ridge;
+    border: 1px ridge;
     margin: 0 auto;
     background-color: black;
+    align-items: center;
 }
 
 #video-thumbnail {
@@ -39,6 +40,7 @@ body {
     height: 100%;
     object-fit: cover;
     cursor: pointer;
+    z-index: 5;
 }
 
 #video,
@@ -49,10 +51,9 @@ img {
 
 .controls {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     left: 0;
     right: 0;
-    height: 40px;
     background-color: rgba(
         0,
         0,
@@ -64,16 +65,21 @@ img {
     align-items: center;
     padding: 10px;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    .video-container:hover .controls{
+        opacity: 1;
+    }
+    transition: opacity 0.3s ease-in;
+    overflow: hidden;
 }
 
 .controls button {
-    background-color: transparent;
+    background-color: #1b181e;
     border: none;
-    color: #fff;
-    font-size: 20px;
+    color: #1b181e;
+    font-size: 18px;
     cursor: pointer;
     outline: none;
+    overflow: hidden;
 }
 
 .left {
@@ -86,7 +92,7 @@ img {
 
 .video-timer {
     position: relative;
-    top: 5.2px;
+    top: 5px;
     right: 6px;
     display: flex;
     flex-direction: row;
@@ -98,13 +104,13 @@ img {
 #separator {
     margin: 0 5px;
     font-size: 16px;
-    font-family: "Open sans";
+    font-family: "Open sans", serif;
 }
 
 .right {
     position: relative;
     padding: 10px;
-    top: 1.5px;
+    top: 1px;
 }
 
 .fa-volume-up,
@@ -140,16 +146,16 @@ input {
 
 .playback-line {
     position: relative;
-    top: 2.7px;
+    top: 3px;
     height: 4px;
     background-color: #ddd;
-    width: 40%;
+    flex-grow: 1;
     cursor: pointer;
 }
 
 .progress-bar {
     height: 100%;
-    width: 0;
+    width: 10%;
     background-color: #0078d4;
-    transition: width 0.1s linear;
+    transition: width 1s linear;
 }

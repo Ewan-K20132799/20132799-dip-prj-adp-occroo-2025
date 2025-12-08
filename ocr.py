@@ -4,8 +4,8 @@ from PIL import Image
 import pytesseract
 from preliminary.library_basics import CodingVideo
 
-VID_PATH = Path("../resources/oop.mp4")
-OUT_PATH = Path("../resources/")
+VID_PATH = Path("resources/oop.mp4")
+OUT_PATH = Path("resources/")
 
 
 def init_lib_base():
@@ -48,12 +48,12 @@ class OCR:
         pass
 
 def test():
-    Video = OCR(video=VID_PATH)
+    vid = OCR(video=VID_PATH)
 
-    generate_img = Video.gen_image(frame_num=20)
-    save_img = Video.save_img(sec_num=20)
-    generate_ocr = Video.gen_ocr(sec_num=20)
-    save_ocr_text = Video.save_ocr_as_txt(sec_num=20)
+    generate_img = vid.gen_image(frame_num=20)
+    save_img = vid.save_img(sec_num=20)
+    generate_ocr = vid.gen_ocr(sec_num=20)
+    save_ocr_text = vid.save_ocr_as_txt(sec_num=20)
 
     print("--Results--")
     print(f"{generate_img}")

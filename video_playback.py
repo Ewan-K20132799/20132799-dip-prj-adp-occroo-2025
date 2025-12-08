@@ -2,7 +2,7 @@
 from pathlib import Path
 import cv2
 
-VID_PATH = Path("../resources/oop.mp4")
+VID_PATH = Path("resources/oop.mp4")
 
 class VideoPlayer:
     capture: cv2.VideoCapture
