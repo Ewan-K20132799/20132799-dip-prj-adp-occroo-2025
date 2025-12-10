@@ -24,9 +24,7 @@
     <!-- Thumbnail overlay (must be outside <video>) -->
     <img id="video-thumbnail" src="/static/thumbnail.jpg" alt="Video thumbnail">
 
-    <video id="video">
-        <source src="/resources/oop.mp4" type="video/mp4">
-    </video>
+    <video id="video" controls src="/resources/oop.mp4"></video>
 
     <!-- Controller container -->
     <div class="controls">
@@ -70,6 +68,25 @@
     </div>
 </div>
 
+<div class="ocr">
+    <button>
+      <span class="transition"></span>
+      <span class="gradient"></span>
+      <span class="label">Generate OCR</span>
+    </button>
+
+    <button>
+      <span class="transition"></span>
+      <span class="gradient"></span>
+      <span class="label">Save OCR</span>
+    </button>
+
+    <button>
+      <span class="transition"></span>
+      <span class="gradient"></span>
+      <span class="label">Load video</span>
+    </button>
+</div>
 
     <script src="/static/main_app.js"></script>
 
